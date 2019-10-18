@@ -21,6 +21,7 @@
 #include <sdbusplus/asio/connection.hpp>
 #include <tuple>
 #include <user_channel/channel_layer.hpp>
+#include <iostream>
 
 using namespace phosphor::logging;
 
@@ -85,7 +86,7 @@ int main(int argc, char* argv[])
     bool verbose = false;
     app.add_option("-v,--verbose", verbose, "print more verbose output");
     CLI11_PARSE(app, argc, argv);
-
+	printf ("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     // Connect to system bus
     auto rc = sd_bus_default_system(&bus);
     if (rc < 0)
