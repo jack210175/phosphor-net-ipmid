@@ -85,12 +85,12 @@ int main(int argc, char* argv[])
     bool verbose = false;
     app.add_option("-v,--verbose", verbose, "print more verbose output");
     CLI11_PARSE(app, argc, argv);
-
+	printf ("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     // Connect to system bus
     auto rc = sd_bus_default_system(&bus);
     if (rc < 0)
     {
-        log<level::ERR>("@@@Failed to connect to system bus @@@",
+        log<level::ERR>("Failed to connect to system bus",
                         entry("ERROR=%s", strerror(-rc)));
         return rc;
     }
