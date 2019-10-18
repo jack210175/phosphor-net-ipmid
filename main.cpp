@@ -21,6 +21,7 @@
 #include <sdbusplus/asio/connection.hpp>
 #include <tuple>
 #include <user_channel/channel_layer.hpp>
+#include <iostream>
 
 using namespace phosphor::logging;
 
